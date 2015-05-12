@@ -1,0 +1,811 @@
+Country,Age First Heard a Song,Normalized Count
+Bulgaria,0,0
+Bulgaria,1,0.964187328
+Bulgaria,2,0.275482094
+Bulgaria,3,0.41322314
+Bulgaria,4,0.550964187
+Bulgaria,5,1.101928375
+Bulgaria,6,0.550964187
+Bulgaria,7,0.964187328
+Bulgaria,8,1.515151515
+Bulgaria,9,0.826446281
+Bulgaria,10,3.443526171
+Bulgaria,11,1.377410468
+Bulgaria,12,4.269972452
+Bulgaria,13,3.443526171
+Bulgaria,14,7.024793388
+Bulgaria,15,7.988980716
+Bulgaria,16,7.162534435
+Bulgaria,17,6.887052342
+Bulgaria,18,7.851239669
+Bulgaria,19,3.443526171
+Bulgaria,20,6.060606061
+Bulgaria,21,1.928374656
+Bulgaria,22,3.305785124
+Bulgaria,23,2.341597796
+Bulgaria,24,3.03030303
+Bulgaria,25,5.371900826
+Bulgaria,26,2.892561983
+Bulgaria,27,1.377410468
+Bulgaria,28,1.790633609
+Bulgaria,29,0.550964187
+Bulgaria,30,2.066115702
+Bulgaria,31,0.41322314
+Bulgaria,32,1.239669421
+Bulgaria,33,1.515151515
+Bulgaria,34,1.515151515
+Bulgaria,35,0.964187328
+Bulgaria,36,0.137741047
+Bulgaria,37,0.137741047
+Bulgaria,38,0.41322314
+Bulgaria,39,0.41322314
+Bulgaria,40,0.826446281
+Bulgaria,41,0
+Bulgaria,42,0.275482094
+Bulgaria,43,0.137741047
+Bulgaria,44,0.137741047
+Bulgaria,45,0.41322314
+Bulgaria,46,0.137741047
+Bulgaria,47,0
+Bulgaria,48,0.137741047
+Bulgaria,49,0
+Bulgaria,50,0
+Bulgaria,51,0.275482094
+Bulgaria,52,0.137741047
+Bulgaria,53,0
+Bulgaria,54,0
+Bulgaria,55,0
+Bulgaria,56,0
+Bulgaria,57,0
+Bulgaria,58,0
+Bulgaria,59,0
+Bulgaria,60,0
+Bulgaria,61,0
+Bulgaria,62,0
+Bulgaria,63,0
+Bulgaria,64,0
+Bulgaria,65,0
+Bulgaria,66,0
+Bulgaria,67,0
+Bulgaria,68,0
+Bulgaria,69,0
+Bulgaria,70,0
+Bulgaria,71,0
+Bulgaria,72,0
+Bulgaria,73,0
+Bulgaria,74,0
+Bulgaria,75,0
+Bulgaria,76,0
+Bulgaria,77,0
+Bulgaria,78,0
+Bulgaria,79,0
+Bulgaria,80,0
+Canada,0,0
+Canada,1,0.297619048
+Canada,2,0.297619048
+Canada,3,0.654761905
+Canada,4,0.535714286
+Canada,5,1.845238095
+Canada,6,1.488095238
+Canada,7,1.071428571
+Canada,8,2.44047619
+Canada,9,1.19047619
+Canada,10,4.285714286
+Canada,11,1.428571429
+Canada,12,4.226190476
+Canada,13,3.869047619
+Canada,14,4.345238095
+Canada,15,7.261904762
+Canada,16,6.785714286
+Canada,17,5.119047619
+Canada,18,5.595238095
+Canada,19,3.928571429
+Canada,20,5.654761905
+Canada,21,2.142857143
+Canada,22,2.44047619
+Canada,23,2.678571429
+Canada,24,2.023809524
+Canada,25,4.047619048
+Canada,26,2.261904762
+Canada,27,1.369047619
+Canada,28,1.964285714
+Canada,29,1.30952381
+Canada,30,3.571428571
+Canada,31,1.25
+Canada,32,0.535714286
+Canada,33,0.952380952
+Canada,34,0.654761905
+Canada,35,1.428571429
+Canada,36,0.416666667
+Canada,37,0.714285714
+Canada,38,0.654761905
+Canada,39,1.071428571
+Canada,40,2.083333333
+Canada,41,0.178571429
+Canada,42,0.595238095
+Canada,43,0.714285714
+Canada,44,0.05952381
+Canada,45,0.654761905
+Canada,46,0.05952381
+Canada,47,0.178571429
+Canada,48,0.119047619
+Canada,49,0.238095238
+Canada,50,0.297619048
+Canada,51,0
+Canada,52,0.119047619
+Canada,53,0
+Canada,54,0.05952381
+Canada,55,0.297619048
+Canada,56,0
+Canada,57,0.416666667
+Canada,58,0
+Canada,59,0
+Canada,60,0
+Canada,61,0
+Canada,62,0.119047619
+Canada,63,0
+Canada,64,0
+Canada,65,0
+Canada,66,0
+Canada,67,0
+Canada,68,0
+Canada,69,0
+Canada,70,0
+Canada,71,0
+Canada,72,0
+Canada,73,0
+Canada,74,0
+Canada,75,0
+Canada,76,0
+Canada,77,0
+Canada,78,0
+Canada,79,0
+Canada,80,0
+Germany,0,0
+Germany,1,0.748502994
+Germany,2,0
+Germany,3,0.299401198
+Germany,4,0.299401198
+Germany,5,0.748502994
+Germany,6,1.347305389
+Germany,7,0.748502994
+Germany,8,0.898203593
+Germany,9,0.449101796
+Germany,10,2.395209581
+Germany,11,1.347305389
+Germany,12,3.143712575
+Germany,13,1.946107784
+Germany,14,3.592814371
+Germany,15,6.586826347
+Germany,16,7.48502994
+Germany,17,5.838323353
+Germany,18,7.185628743
+Germany,19,3.293413174
+Germany,20,6.437125749
+Germany,21,3.293413174
+Germany,22,3.592814371
+Germany,23,2.994011976
+Germany,24,2.694610778
+Germany,25,5.538922156
+Germany,26,2.694610778
+Germany,27,1.047904192
+Germany,28,2.994011976
+Germany,29,2.395209581
+Germany,30,2.095808383
+Germany,31,0.748502994
+Germany,32,0.299401198
+Germany,33,1.19760479
+Germany,34,0.598802395
+Germany,35,1.646706587
+Germany,36,0.149700599
+Germany,37,0
+Germany,38,0.598802395
+Germany,39,0.149700599
+Germany,40,0.299401198
+Germany,41,0.449101796
+Germany,42,0.598802395
+Germany,43,0
+Germany,44,0
+Germany,45,0.299401198
+Germany,46,6.886227545
+Germany,47,0.598802395
+Germany,48,0.299401198
+Germany,49,0.149700599
+Germany,50,0
+Germany,51,0
+Germany,52,0.149700599
+Germany,53,0
+Germany,54,0
+Germany,55,0.299401198
+Germany,56,0
+Germany,57,0
+Germany,58,0.149700599
+Germany,59,0.149700599
+Germany,60,0
+Germany,61,0
+Germany,62,0
+Germany,63,0
+Germany,64,0
+Germany,65,0.149700599
+Germany,66,0
+Germany,67,0
+Germany,68,0
+Germany,69,0
+Germany,70,0
+Germany,71,0
+Germany,72,0
+Germany,73,0
+Germany,74,0
+Germany,75,0
+Germany,76,0
+Germany,77,0
+Germany,78,0
+Germany,79,0
+Germany,80,0
+Spain,0,0
+Spain,1,0.458715596
+Spain,2,1.032110092
+Spain,3,0.458715596
+Spain,4,0.688073394
+Spain,5,0.917431193
+Spain,6,1.032110092
+Spain,7,1.26146789
+Spain,8,1.26146789
+Spain,9,1.376146789
+Spain,10,3.325688073
+Spain,11,1.26146789
+Spain,12,4.128440367
+Spain,13,3.669724771
+Spain,14,5.389908257
+Spain,15,7.912844037
+Spain,16,9.174311927
+Spain,17,7.224770642
+Spain,18,8.371559633
+Spain,19,4.128440367
+Spain,20,7.568807339
+Spain,21,2.866972477
+Spain,22,2.408256881
+Spain,23,3.211009174
+Spain,24,2.866972477
+Spain,25,3.096330275
+Spain,26,2.178899083
+Spain,27,1.949541284
+Spain,28,1.146788991
+Spain,29,1.146788991
+Spain,30,2.064220183
+Spain,31,0.802752294
+Spain,32,0.917431193
+Spain,33,0.344036697
+Spain,34,0.802752294
+Spain,35,0.802752294
+Spain,36,0.458715596
+Spain,37,0.114678899
+Spain,38,0.114678899
+Spain,39,0.229357798
+Spain,40,0.458715596
+Spain,41,0.114678899
+Spain,42,0.229357798
+Spain,43,0.114678899
+Spain,44,0.458715596
+Spain,45,0.114678899
+Spain,46,0
+Spain,47,0
+Spain,48,0
+Spain,49,0.114678899
+Spain,50,0.114678899
+Spain,51,0
+Spain,52,0
+Spain,53,0
+Spain,54,0
+Spain,55,0
+Spain,56,0
+Spain,57,0
+Spain,58,0.114678899
+Spain,59,0
+Spain,60,0
+Spain,61,0
+Spain,62,0
+Spain,63,0
+Spain,64,0
+Spain,65,0
+Spain,66,0
+Spain,67,0
+Spain,68,0
+Spain,69,0
+Spain,70,0
+Spain,71,0
+Spain,72,0
+Spain,73,0
+Spain,74,0
+Spain,75,0
+Spain,76,0
+Spain,77,0
+Spain,78,0
+Spain,79,0
+Spain,80,0
+Great Britain,0,0
+Great Britain,1,0.491098834
+Great Britain,2,0.184162063
+Great Britain,3,0.859422959
+Great Britain,4,0.73664825
+Great Britain,5,1.473296501
+Great Britain,6,0.73664825
+Great Britain,7,0.982197667
+Great Britain,8,1.964395335
+Great Britain,9,1.043585021
+Great Britain,10,2.885205648
+Great Britain,11,1.16635973
+Great Britain,12,3.314917127
+Great Britain,13,2.33271946
+Great Britain,14,4.726826274
+Great Britain,15,7.612031921
+Great Britain,16,8.103130755
+Great Britain,17,6.384284837
+Great Britain,18,7.427869859
+Great Britain,19,3.990178023
+Great Britain,20,4.726826274
+Great Britain,21,4.23572744
+Great Britain,22,2.394106814
+Great Britain,23,2.701043585
+Great Britain,24,2.701043585
+Great Britain,25,3.314917127
+Great Britain,26,2.025782689
+Great Britain,27,1.964395335
+Great Britain,28,2.33271946
+Great Britain,29,1.227747084
+Great Britain,30,2.823818293
+Great Britain,31,0.798035605
+Great Britain,32,1.104972376
+Great Britain,33,0.859422959
+Great Britain,34,0.613873542
+Great Britain,35,1.596071209
+Great Britain,36,0.73664825
+Great Britain,37,0.982197667
+Great Britain,38,0.859422959
+Great Britain,39,0.552486188
+Great Britain,40,0.859422959
+Great Britain,41,0.122774708
+Great Britain,42,0.73664825
+Great Britain,43,0.184162063
+Great Britain,44,0.429711479
+Great Britain,45,0.552486188
+Great Britain,46,0.491098834
+Great Britain,47,0.368324125
+Great Britain,48,0.429711479
+Great Britain,49,0.061387354
+Great Britain,50,0.061387354
+Great Britain,51,0.122774708
+Great Britain,52,0.061387354
+Great Britain,53,0.061387354
+Great Britain,54,0.122774708
+Great Britain,55,0
+Great Britain,56,0.061387354
+Great Britain,57,0
+Great Britain,58,0.061387354
+Great Britain,59,0.061387354
+Great Britain,60,0
+Great Britain,61,0
+Great Britain,62,0
+Great Britain,63,0.122774708
+Great Britain,64,0
+Great Britain,65,0
+Great Britain,66,0
+Great Britain,67,0
+Great Britain,68,0
+Great Britain,69,0.061387354
+Great Britain,70,0
+Great Britain,71,0
+Great Britain,72,0
+Great Britain,73,0
+Great Britain,74,0
+Great Britain,75,0
+Great Britain,76,0
+Great Britain,77,0
+Great Britain,78,0
+Great Britain,79,0
+Great Britain,80,0
+Indonesia,0,0
+Indonesia,1,1.460823373
+Indonesia,2,1.593625498
+Indonesia,3,1.460823373
+Indonesia,4,0.531208499
+Indonesia,5,0.664010624
+Indonesia,6,0.929614874
+Indonesia,7,1.195219124
+Indonesia,8,0.26560425
+Indonesia,9,0.398406375
+Indonesia,10,2.124833997
+Indonesia,11,1.195219124
+Indonesia,12,1.992031873
+Indonesia,13,2.921646746
+Indonesia,14,3.054448871
+Indonesia,15,8.499335989
+Indonesia,16,6.507304117
+Indonesia,17,10.22576361
+Indonesia,18,8.366533865
+Indonesia,19,4.38247012
+Indonesia,20,8.632138114
+Indonesia,21,3.585657371
+Indonesia,22,3.85126162
+Indonesia,23,4.913678619
+Indonesia,24,3.054448871
+Indonesia,25,3.187250996
+Indonesia,26,1.328021248
+Indonesia,27,2.788844622
+Indonesia,28,1.859229748
+Indonesia,29,1.726427623
+Indonesia,30,2.124833997
+Indonesia,31,0.664010624
+Indonesia,32,1.062416999
+Indonesia,33,1.062416999
+Indonesia,34,0.26560425
+Indonesia,35,0.26560425
+Indonesia,36,0.398406375
+Indonesia,37,0.26560425
+Indonesia,38,0.26560425
+Indonesia,39,0
+Indonesia,40,0.132802125
+Indonesia,41,0.531208499
+Indonesia,42,0
+Indonesia,43,0
+Indonesia,44,0
+Indonesia,45,0
+Indonesia,46,0
+Indonesia,47,0
+Indonesia,48,0
+Indonesia,49,0
+Indonesia,50,0.26560425
+Indonesia,51,0
+Indonesia,52,0
+Indonesia,53,0
+Indonesia,54,0
+Indonesia,55,0
+Indonesia,56,0
+Indonesia,57,0
+Indonesia,58,0
+Indonesia,59,0
+Indonesia,60,0
+Indonesia,61,0
+Indonesia,62,0
+Indonesia,63,0
+Indonesia,64,0
+Indonesia,65,0
+Indonesia,66,0
+Indonesia,67,0
+Indonesia,68,0
+Indonesia,69,0
+Indonesia,70,0
+Indonesia,71,0
+Indonesia,72,0
+Indonesia,73,0
+Indonesia,74,0
+Indonesia,75,0
+Indonesia,76,0
+Indonesia,77,0
+Indonesia,78,0
+Indonesia,79,0
+Indonesia,80,0
+Italy,0,0
+Italy,1,1.278409091
+Italy,2,0.994318182
+Italy,3,1.278409091
+Italy,4,0.426136364
+Italy,5,0.994318182
+Italy,6,0.710227273
+Italy,7,0.994318182
+Italy,8,0.852272727
+Italy,9,0.852272727
+Italy,10,2.414772727
+Italy,11,0.994318182
+Italy,12,2.982954545
+Italy,13,3.125
+Italy,14,5.823863636
+Italy,15,9.090909091
+Italy,16,10.22727273
+Italy,17,7.244318182
+Italy,18,11.78977273
+Italy,19,4.261363636
+Italy,20,6.25
+Italy,21,2.414772727
+Italy,22,3.693181818
+Italy,23,2.130681818
+Italy,24,1.846590909
+Italy,25,3.409090909
+Italy,26,0.852272727
+Italy,27,0.994318182
+Italy,28,1.278409091
+Italy,29,1.136363636
+Italy,30,2.130681818
+Italy,31,1.420454545
+Italy,32,0.852272727
+Italy,33,0.284090909
+Italy,34,0.426136364
+Italy,35,0.852272727
+Italy,36,1.136363636
+Italy,37,0.284090909
+Italy,38,0
+Italy,39,0.284090909
+Italy,40,0.568181818
+Italy,41,0
+Italy,42,0
+Italy,43,0
+Italy,44,0.142045455
+Italy,45,0.426136364
+Italy,46,0.142045455
+Italy,47,0
+Italy,48,0
+Italy,49,0.142045455
+Italy,50,0.284090909
+Italy,51,0
+Italy,52,0
+Italy,53,0
+Italy,54,0
+Italy,55,0
+Italy,56,0
+Italy,57,0
+Italy,58,0.142045455
+Italy,59,0
+Italy,60,0.142045455
+Italy,61,0
+Italy,62,0
+Italy,63,0
+Italy,64,0
+Italy,65,0
+Italy,66,0
+Italy,67,0
+Italy,68,0
+Italy,69,0
+Italy,70,0
+Italy,71,0
+Italy,72,0
+Italy,73,0
+Italy,74,0
+Italy,75,0
+Italy,76,0
+Italy,77,0
+Italy,78,0
+Italy,79,0
+Italy,80,0
+Philippines,0,0
+Philippines,1,0.234375
+Philippines,2,0
+Philippines,3,0.703125
+Philippines,4,0.46875
+Philippines,5,0.46875
+Philippines,6,0.625
+Philippines,7,0.859375
+Philippines,8,1.328125
+Philippines,9,1.015625
+Philippines,10,3.59375
+Philippines,11,1.015625
+Philippines,12,3.984375
+Philippines,13,3.75
+Philippines,14,4.21875
+Philippines,15,8.28125
+Philippines,16,7.1875
+Philippines,17,5.9375
+Philippines,18,8.828125
+Philippines,19,3.671875
+Philippines,20,8.59375
+Philippines,21,4.53125
+Philippines,22,3.59375
+Philippines,23,3.75
+Philippines,24,2.1875
+Philippines,25,3.28125
+Philippines,26,2.109375
+Philippines,27,1.953125
+Philippines,28,2.109375
+Philippines,29,0.9375
+Philippines,30,2.578125
+Philippines,31,1.015625
+Philippines,32,1.015625
+Philippines,33,0.78125
+Philippines,34,0.390625
+Philippines,35,0.9375
+Philippines,36,0.46875
+Philippines,37,0.234375
+Philippines,38,0.3125
+Philippines,39,0.390625
+Philippines,40,0.703125
+Philippines,41,0.234375
+Philippines,42,0
+Philippines,43,0.390625
+Philippines,44,0.078125
+Philippines,45,0.234375
+Philippines,46,0.15625
+Philippines,47,0.3125
+Philippines,48,0
+Philippines,49,0
+Philippines,50,0.3125
+Philippines,51,0
+Philippines,52,0
+Philippines,53,0.078125
+Philippines,54,0
+Philippines,55,0
+Philippines,56,0.15625
+Philippines,57,0
+Philippines,58,0
+Philippines,59,0
+Philippines,60,0
+Philippines,61,0
+Philippines,62,0
+Philippines,63,0
+Philippines,64,0
+Philippines,65,0
+Philippines,66,0
+Philippines,67,0
+Philippines,68,0
+Philippines,69,0
+Philippines,70,0
+Philippines,71,0
+Philippines,72,0
+Philippines,73,0
+Philippines,74,0
+Philippines,75,0
+Philippines,76,0
+Philippines,77,0
+Philippines,78,0
+Philippines,79,0
+Philippines,80,0
+Romania,0,0
+Romania,1,1.792114695
+Romania,2,1.523297491
+Romania,3,2.150537634
+Romania,4,0.716845878
+Romania,5,0.448028674
+Romania,6,0.268817204
+Romania,7,0.537634409
+Romania,8,0.537634409
+Romania,9,0.806451613
+Romania,10,2.508960573
+Romania,11,1.254480287
+Romania,12,3.405017921
+Romania,13,3.405017921
+Romania,14,5.286738351
+Romania,15,6.362007168
+Romania,16,6.899641577
+Romania,17,7.616487455
+Romania,18,8.602150538
+Romania,19,4.032258065
+Romania,20,6.630824373
+Romania,21,3.494623656
+Romania,22,3.94265233
+Romania,23,2.777777778
+Romania,24,2.956989247
+Romania,25,4.390681004
+Romania,26,1.88172043
+Romania,27,1.612903226
+Romania,28,1.523297491
+Romania,29,1.344086022
+Romania,30,2.956989247
+Romania,31,0.537634409
+Romania,32,0.716845878
+Romania,33,0.896057348
+Romania,34,0.268817204
+Romania,35,0.627240143
+Romania,36,0.268817204
+Romania,37,0.358422939
+Romania,38,0.537634409
+Romania,39,0.17921147
+Romania,40,0.716845878
+Romania,41,0.448028674
+Romania,42,0.17921147
+Romania,43,0
+Romania,44,0.537634409
+Romania,45,0.896057348
+Romania,46,0.089605735
+Romania,47,0.17921147
+Romania,48,0.17921147
+Romania,49,0
+Romania,50,0.358422939
+Romania,51,0
+Romania,52,0
+Romania,53,0.17921147
+Romania,54,0.089605735
+Romania,55,0
+Romania,56,0
+Romania,57,0
+Romania,58,0
+Romania,59,0.089605735
+Romania,60,0
+Romania,61,0
+Romania,62,0
+Romania,63,0
+Romania,64,0
+Romania,65,0
+Romania,66,0
+Romania,67,0
+Romania,68,0
+Romania,69,0
+Romania,70,0
+Romania,71,0
+Romania,72,0
+Romania,73,0
+Romania,74,0
+Romania,75,0
+Romania,76,0
+Romania,77,0
+Romania,78,0
+Romania,79,0
+Romania,80,0
+United States,0,0.05574136
+United States,1,0.390189521
+United States,2,0.2787068
+United States,3,0.780379041
+United States,4,0.724637681
+United States,5,2.201783724
+United States,6,1.477146042
+United States,7,1.839464883
+United States,8,2.313266444
+United States,9,1.282051282
+United States,10,4.069119287
+United States,11,1.923076923
+United States,12,5.574136009
+United States,13,4.069119287
+United States,14,4.682274247
+United States,15,7.329988852
+United States,16,6.939799331
+United States,17,5.267558528
+United States,18,5.462653289
+United States,19,3.372352285
+United States,20,5.100334448
+United States,21,3.093645485
+United States,22,2.647714604
+United States,23,2.619843924
+United States,24,2.313266444
+United States,25,3.065774805
+United States,26,1.309921962
+United States,27,0.947603122
+United States,28,1.783723523
+United States,29,1.282051282
+United States,30,2.173913043
+United States,31,0.863991081
+United States,32,1.560758082
+United States,33,1.059085842
+United States,34,0.752508361
+United States,35,1.198439242
+United States,36,0.390189521
+United States,37,0.696767001
+United States,38,0.752508361
+United States,39,0.2787068
+United States,40,1.365663322
+United States,41,0.557413601
+United States,42,0.30657748
+United States,43,0.334448161
+United States,44,0.390189521
+United States,45,0.641025641
+United States,46,0.19509476
+United States,47,0.30657748
+United States,48,0.473801561
+United States,49,0.11148272
+United States,50,0.529542921
+United States,51,0.16722408
+United States,52,0.1393534
+United States,53,0.05574136
+United States,54,0.08361204
+United States,55,0.16722408
+United States,56,0.02787068
+United States,57,0
+United States,58,0
+United States,59,0.02787068
+United States,60,0.08361204
+United States,61,0.02787068
+United States,62,0
+United States,63,0
+United States,64,0
+United States,65,0
+United States,66,0.02787068
+United States,67,0.05574136
+United States,68,0
+United States,69,0
+United States,70,0
+United States,71,0
+United States,72,0
+United States,73,0
+United States,74,0
+United States,75,0
+United States,76,0
+United States,77,0
+United States,78,0
+United States,79,0
+United States,80,0
