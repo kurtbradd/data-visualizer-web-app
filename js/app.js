@@ -42,7 +42,7 @@ var graph_types = {
 	genre_1: {
 		file_name: "data/binned_genre_by_age_rem.csv",
 		attributes: {
-			chart: { type: "area" },
+			chart: { type: "line" },
 			title: { text: "Genre By Age" },
 			xAxis: { type: "category" }
 		}
