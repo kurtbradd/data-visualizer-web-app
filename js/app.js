@@ -13,8 +13,9 @@ hdi 			-
 
 // Local Scope
 var current_graph, high_chart_container;
+
 var graph_types = {
-	age: {
+	rem_1: {
 		file_name: "data/binned_age_rem.csv",
 		attributes: {
 			chart: { type: "area" },
@@ -23,7 +24,7 @@ var graph_types = {
 			xAxis: { type: "category", allowDecimals: false }
 		}
 	},
-	country: {
+	rem_2: {
 		file_name: "data/binned_country_rem.csv",
 		attributes: {
 			chart: { type: "area" },
@@ -31,7 +32,7 @@ var graph_types = {
 			xAxis: { type: "category", allowDecimals: false }
 		}
 	},
-	genre_0: {
+	rem_3: {
 		file_name: "data/binned_genre_rem.csv",
 		attributes: {
 			chart: { type: "area" },
@@ -39,12 +40,63 @@ var graph_types = {
 			xAxis: { type: "category" }
 		}
 	},
-	genre_1: {
+	rem_4: {
 		file_name: "data/binned_genre_by_age_rem.csv",
 		attributes: {
 			chart: { type: "line" },
 			title: { text: "Genre By Age" },
 			xAxis: { type: "category" }
+		}
+	},
+	hdi_1: {
+		file_name: "data/hdi_weekday.csv",
+		attributes: {
+			chart: { type: "line" },
+			title: { text: "HDI Weekday" },
+			xAxis: { type: "category" }
+		}
+	},
+	hdi_2: {
+		file_name: "data/hdi_all_countries_over_weekday.csv",
+		attributes: {
+			chart: { type: "line" },
+			title: { text: "HDI Week" },
+			subtitle: { text: "All Countries Over Week" },
+			xAxis: { type: "category" }
+		}
+	},
+	hdi_3: {
+		file_name: "data/hdi_regions_and_downloads.csv",
+		attributes: {
+			chart: { type: "line" },
+			title: { text: "HDI Regions & Downloads" },
+			xAxis: { type: "category" }
+		}
+	},
+	rush_1: {
+		file_name: "data/rush_genre_preference.csv",
+		attributes: {
+			chart: { type: "column" },
+			title: { text: "Genre Preferences" },
+			xAxis: { type: "category" }
+		}
+	},
+	rush_2: {
+		file_name: "data/rush_liveness.csv",
+		attributes: {
+			chart: { type: "column" },
+			title: { text: "Liveness" },
+			subtitle: {text: "Live performance popularity" },
+			xAxis: { type: "category" }
+		}
+	},
+	rush_3: {
+		file_name: "data/rush_nostalgia.csv",
+		attributes: {
+			chart: { type: "column" },
+			title: { text: "Nostalgia" },
+			xAxis: { type: "category" },
+			yAxis: { min: 0}
 		}
 	},
 	epidemic: {
@@ -54,6 +106,21 @@ var graph_types = {
 			title: { text: "Epidemic" },
 			xAxis: { type: "datetime" }
 		}
+	}
+}
+
+var topic_data = {
+	reminiscence: {
+		title: "Reminiscence Bump",
+		graphs: []
+	},
+	epidemic: {
+		title: "Song Epidemic",
+		graphs: []
+	},
+	HDI: {
+		title: "HDI",
+		graphs: []
 	}
 }
 
