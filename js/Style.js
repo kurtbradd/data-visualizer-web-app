@@ -78,9 +78,12 @@ Highcharts.theme = {
 	},
 	plotOptions: {
 		area: {
-			lineWidth: 2.5,
-			fillOpacity: 0.60,
-			marker: { enabled: false }
+			lineWidth: 3.5,
+			fillOpacity: 0.20,
+		},
+		areaspline: {
+			fillOpacity: 0.55,
+			lineWidth: 2.5
 		},
 		series: {
 			states: { 
