@@ -2,31 +2,34 @@
 <html>
 	<head>
 		<title>Digital Music Lab</title>
-			<meta charset="UTF-8" content="Charset for Application">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<meta name="description" content="Music Data visualizations">
+		<meta charset="UTF-8" content="Charset for Application">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Music Data visualizations">
 
-			<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-			<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,100,900">
-			<link rel="stylesheet" type="text/css" href="css/style.css">
-			<base href="/">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,100,900">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<base href="/">
 	</head>
 
 	<body>
 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-10 col-md-offset-1 col-xs-12">
-					<!-- JUMBOTRON -->
+				<div class="col-xs-12">
+					
+					<!-- TITLE -->
 					<div class="text-center" id="main-title">
 						<h1>Reminiscence Bump</h1>
 						<h3>Digital Music Lab @ McMaster University, Hamilton</h3>				
 					</div>
+					
 					<!-- BUTTON GROUP -->
-					<div class="text-center" id="graph-select">
+					<div class="text-center">
 						<div class="btn-group" id="button-group" data-toggle="buttons"></div>
 					</div>
+					
 					<!-- CHART -->
 					<div id="highchart"></div>
 				</div>
@@ -34,11 +37,13 @@
 
 		</div>
 		
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
-		<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/async/0.9.0/async.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/lib/highcharts.js"></script>
+		<script type="text/javascript" src="js/lib/exporting.js"></script>
+		<script type="text/javascript" src="js/lib/data.js"></script>
+		<script type="text/javascript" src="js/lib/async.min.js"></script>
+		<script type="text/javascript" src="js/lib/moment.min.js"></script>
 
 		<script type="text/javascript" src="js/lib/lodash.min.js"></script>
 		<script type="text/javascript" src="js/lib/papaparse.min.js"></script>
