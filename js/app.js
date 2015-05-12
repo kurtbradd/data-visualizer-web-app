@@ -4,40 +4,47 @@ $(document).ready(initApp);
 ///// VARIABLES
 //////////////////////////////////////////////////////////
 
+
+/*
+rem 			- age, country, genre, genre by age
+epidemic 	- duck sauce, breathe slow
+hdi 			-
+*/
+
 // Local Scope
 var current_graph, high_chart_container;
 var graph_types = {
 	age: {
-		file_name: "/data/age_rem.csv",
+		file_name: "/data/binned_age_rem.csv",
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Age" },
-			xAxis: { type: "linear", allowDecimals: false }
+			subtitle: { text: "5 Year Bins" },
+			xAxis: { type: "category", allowDecimals: false }
 		}
 	},
 	country: {
-		file_name: "/data/country_rem.csv",
+		file_name: "/data/binned_country_rem.csv",
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Country" },
-			xAxis: { type: "linear", allowDecimals: false }
+			xAxis: { type: "category", allowDecimals: false }
 		}
 	},
-	genre1: {
-		file_name: "/data/genrebyage5years.csv",
+	genre_0: {
+		file_name: "/data/binned_genre_rem.csv",
 		attributes: {
 			chart: { type: "area" },
-			title: { text: "Genre By Age" },
-			subtitle: { text: "5 Year Bins" },
-			xAxis: { type: "linear", allowDecimals: false }	
+			title: { text: "Genre" },
+			xAxis: { type: "category" }
 		}
 	},
-	genre2: {
+	genre_1: {
 		file_name: "/data/genrebyage.csv",
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Genre By Age" },
-			xAxis: { type: "linear", allowDecimals: false }	
+			xAxis: { type: "category" }
 		}
 	},
 	epidemic: {
@@ -47,7 +54,7 @@ var graph_types = {
 			title: { text: "Epidemic" },
 			xAxis: { type: "datetime" }
 		}
-	},
+	}
 }
 
 //////////////////////////////////////////////////////////
