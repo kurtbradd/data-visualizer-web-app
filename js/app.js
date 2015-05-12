@@ -5,28 +5,32 @@ $(document).ready(initApp);
 //////////////////////////////////////////////////////////
 
 // Local Scope
-var current_graph;
+var current_graph, high_chart_container;
 var graph_types = {
 	age: {
-		title: "Age",
 		file_name: "/data/age_rem.csv",
 		attributes: {
-			title: "Age",
-			subtitle: ""
+			chart: { type: "area" },
+			title: { text: "Age" },
+			xAxis: { allowDecimals: false }
 		}
 	},
 	country: {
-		title: "Country",
-		file_name: "/data/country_rem.csv"
-	},
-	epidemic: {
-		title: "Song Epidemic",
-		file_name: "/data/epidemic.csv"
+		file_name: "/data/country_rem.csv",
+		attributes: {
+			chart: { type: "area" },
+			title: { text: "Country" },
+			xAxis: { allowDecimals: false }
+		}
 	},
 	genre1: {
-		title: "Genre By Age",
-		subtitle: "5 Year Bins",
-		file_name: "/data/genrebyage5years.csv"
+		file_name: "/data/genrebyage5years.csv",
+		attributes: {
+			chart: { type: "area" },
+			title: { text: "Genre By Age" },
+			subtitle: { text: "5 Year Bins" },
+			xAxis: { allowDecimals: false }
+		}
 	}
 }
 
@@ -35,7 +39,7 @@ var graph_types = {
 //////////////////////////////////////////////////////////
 function initApp () {
 	var window_height = $(window).height();
-  var high_chart_container = $("#highchart");
+  high_chart_container = $("#highchart");
   high_chart_container.css('height', window_height*0.7);
   buildButtonGroup();
 }
@@ -46,11 +50,11 @@ function initApp () {
 
 function buildButtonGroup () {
 	var group_div = $('#button-group');
-	Object.keys(graph_types).forEach(function (type) {
-		var label = $("<label>").text(graph_types[type].title).addClass('btn btn-default');
+	_.forOwn(graph_types, function (type, key) {
+		var btn_title = type.attributes.title.text;
+		var label = $("<label>").text(btn_title).addClass('btn btn-default');
 		var input = 
-		$('<input type="radio" class="type_group">')
-		.attr({name: type}).change(dataSetSelcted);
+		$('<input type="radio" class="type_group">').attr({name: key}).change(dataSetSelcted);
 		input.appendTo(label);
 		label.appendTo(group_div);
 	})
@@ -60,12 +64,7 @@ function loadGraphType (type) {
 	var handler = function (err, data) {
 		if (err) return window.alert(err);
 		if (!data.rows.length) return window.alert("No Data Was Parsed");
-		current_graph = new Graph(
-			graph_types[type].title,
-			graph_types[type].subtitle,
-			data
-		);
-		current_graph.setGraphDOM($("#highchart"));
+		current_graph = new Graph(graph_types[type].attributes, data);
 		current_graph.drawGraph();
 	}
 

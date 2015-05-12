@@ -1,50 +1,20 @@
-function Graph (title, subtitle, data) {
-	this.title 			= title;
-	this.subtitle 	= subtitle;
+function Graph (attributes, data) {
+	this.attributes = attributes;
 	this.labels 		= labelsFromHeader(data.header);
 	this.categories = groupByCategory(data.rows, this.labels.category);
 	this.categories = _.map(this.categories, extendWithLabelInfo(this.labels))
 	this.categories = _.map(this.categories, buildGraphCategory);
 }
 
-Graph.prototype.setGraphDOM = function(chart_dom) {
-	this.chart = chart_dom;
-}
-
 Graph.prototype.drawGraph = function() {
-	this.chart.highcharts({
-		chart: {
-			type: 'area'
-		},
-		title: { 
-			text: this.title
-		},
-		subtitle: { 
-			text:  this.subtitle
-		},
-		legend: { 
-			title: { 
-				text: this.labels.category
-			}
-		},
-		xAxis: {
-			title: {
-				text: this.labels.x_axis
-			},
-			allowDecimals: false,
-		},
-		yAxis: { 
-			title: { 
-				text: this.labels.y_axis 
-			}
-		},
-		plotOptions: { 
-			area: { 
-				pointStart: 0 
-			}
-		},
-		series: this.categories
-	});
+	var base_config = {
+		series: 	this.categories,
+		legend: 	{ title: { text: this.labels.category }},
+		xAxis: 		{ title: { text: this.labels.x_axis 	}},
+		yAxis: 		{ title: { text: this.labels.y_axis 	}},
+	}
+	var graph_config = _.merge(base_config, this.attributes);
+	var chart = new Highcharts.Chart(graph_config);
 };
 
 var labelsFromHeader = function (header) {

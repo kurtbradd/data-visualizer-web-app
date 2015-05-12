@@ -10,5 +10,3 @@ var parseData = function (data, labels) {
 		return [parseFloat(x_val), parseFloat(y_val)];
 	})
 }
-
-

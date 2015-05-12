@@ -12,6 +12,7 @@ Highcharts.theme = {
 			fontFamily: "'Lato', sans-serif",
 			fontSize: '18px'
 		},
+		renderTo: 'highchart',
 		zoomType: 'x',
 		plotBorderColor: '#606063',
 	},
