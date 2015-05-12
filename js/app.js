@@ -64,18 +64,29 @@ function initApp () {
 	var window_height = $(window).height();
   high_chart_container = $("#highchart");
   high_chart_container.css('height', window_height*0.7);
-  buildButtonGroup();
+  buildNavButtons();
+  buildTopicButtons();
 }
 
 //////////////////////////////////////////////////////////
 ///// HELPER METHODS
 //////////////////////////////////////////////////////////
 
-function buildButtonGroup () {
+function buildNavButtons () {
+	var nav_button_group = $('#navbar-button-group');
+	_.forOwn(topic_data, function (topic, key) {
+		var li = $("<li>").text(topic.title);
+		var a = $("a").attr("href", "#");
+		// a.appendTo(li);
+		// li.appendTo(nav_button_group);
+	})
+}
+
+function buildTopicButtons () {
 	var group_div = $('#button-group');
 	_.forOwn(graph_types, function (type, key) {
 		var btn_title = type.attributes.title.text;
-		var label = $("<label>").text(btn_title).addClass('btn btn-default');
+		var label = $("<label>").text(btn_title).addClass('btn btn-default large-button');
 		var input = 
 		$('<input type="radio" class="type_group">').attr({name: key}).change(dataSetSelcted);
 		input.appendTo(label);
@@ -84,17 +95,15 @@ function buildButtonGroup () {
 }
 
 function loadGraphType (type) {
-	var handler = function (err, data) {
+	async.waterfall([
+		function fetchData (cb) { fetchDataSet(type, cb) },
+		function parseCSV (dataset, cb) { csvToArray(dataset, cb) }
+	], function (err, data) {
 		if (err) return window.alert(err);
 		if (!data.rows.length) return window.alert("No Data Was Parsed");
 		current_graph = new Graph(graph_types[type].attributes, data);
 		current_graph.drawGraph();
-	}
-
-	async.waterfall([
-		function fetchData (cb) { fetchDataSet(type, cb) },
-		function parseCSV (dataset, cb) { csvToArray(dataset, cb) }
-	], handler)
+	})
 }
 
 function dataSetSelcted () {
