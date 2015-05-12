@@ -6,10 +6,10 @@ function GraphCategory (name, data, data_type) {
 var parseData = function (data, data_type) {
 	if (data_type === "linear") 	return _.map(data, linearData);
 	if (data_type === "datetime") return _.map(data, datetimeData);
-	if (data_type === "binned") 	return _.map(data, binData);
+	if (data_type === "category") return _.map(data, categoryData);
 }
 
-var binData = function (e) {
+var categoryData = function (e) {
 	return [e.x_val, parseFloat(e.y_val)];
 }
 
