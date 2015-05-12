@@ -1,6 +1,6 @@
 function GraphCategory (name, data, data_type) {
 	this.name = name;
-	this.data = parseData(data, data_type);
+	this.data = parseData.bind(this)(data, data_type);
 }
 
 var parseData = function (data, data_type) {
@@ -13,10 +13,6 @@ var linearData = function (e) {
 }
 
 var datetimeData = function (e) {
-	var date_parts = e.x_val.split('-');
-	var year = "20"+date_parts[0];
-	var month = date_parts[1];
-	var day = date_parts[2];
-	var date = [year, month, day].join('-');
-	return [date, parseFloat(e.y_val)];
+	var date = moment.utc(e.x_val, "YY-MM-DD").valueOf();
+	return [date.valueOf(), parseFloat(e.y_val)];
 }
