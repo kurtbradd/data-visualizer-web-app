@@ -15,7 +15,7 @@ hdi 			-
 var current_graph, high_chart_container;
 var graph_types = {
 	age: {
-		file_name: "/data/binned_age_rem.csv",
+		file_name: "data/binned_age_rem.csv",
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Age" },
@@ -24,7 +24,7 @@ var graph_types = {
 		}
 	},
 	country: {
-		file_name: "/data/binned_country_rem.csv",
+		file_name: "data/binned_country_rem.csv",
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Country" },
@@ -32,7 +32,7 @@ var graph_types = {
 		}
 	},
 	genre_0: {
-		file_name: "/data/binned_genre_rem.csv",
+		file_name: "data/binned_genre_rem.csv",
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Genre" },
@@ -40,7 +40,7 @@ var graph_types = {
 		}
 	},
 	genre_1: {
-		file_name: "/data/genrebyage.csv",
+		file_name: "data/binned_genre_by_age_rem.csv",
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Genre By Age" },
@@ -48,7 +48,7 @@ var graph_types = {
 		}
 	},
 	epidemic: {
-		file_name: "/data/epidemic.csv",
+		file_name: "data/epidemic.csv",
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Epidemic" },
@@ -103,8 +103,9 @@ function dataSetSelcted () {
 }
 
 function fetchDataSet (type, cb) {
+	var baseTag = document.getElementsByTagName("base").item(0);
 	$.ajax({
-		url: graph_types[type].file_name, 
+		url: baseTag.baseURI + graph_types[type].file_name, 
 		success: function(data) {return cb(null, data) }
 	});
 }
