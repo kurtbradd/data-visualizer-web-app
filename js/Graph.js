@@ -9,13 +9,21 @@ function Graph (attributes, data) {
 
 Graph.prototype.drawGraph = function() {
 	var base_config = {
-		series: 	this.categories,
 		legend: 	{ title: { text: this.labels.category }},
 		xAxis: 		{ title: { text: this.labels.x_axis 	}},
 		yAxis: 		{ title: { text: this.labels.y_axis 	}},
 	}
 	var graph_config = _.merge(base_config, this.attributes);
 	var chart = new Highcharts.Chart(graph_config);
+	
+	var categories = this.categories;
+	var count = 0;
+	chart.addSeries(categories[count++]);
+	var i = setInterval(function(){
+    chart.addSeries(categories[count++]);
+    if(count === categories.length) clearInterval(i);
+	}, 1000);
+
 };
 
 var parseDataPoints = function (categories) {
