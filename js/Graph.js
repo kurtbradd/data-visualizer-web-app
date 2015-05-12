@@ -1,9 +1,10 @@
 function Graph (attributes, data) {
 	this.attributes = attributes;
 	this.labels 		= labelsFromHeader(data.header);
-	this.categories = groupByCategory(data.rows, this.labels.category);
-	this.categories = _.map(this.categories, extendWithLabelInfo(this.labels))
-	this.categories = _.map(this.categories, buildGraphCategory);
+	
+	var grouped 		= _.groupBy(data.rows, this.labels.category);
+	var points 			= parseDataPoints.bind(this)(grouped);
+	this.categories = _.map(points, buildGraphCategory.bind(this));
 }
 
 Graph.prototype.drawGraph = function() {
@@ -17,26 +18,31 @@ Graph.prototype.drawGraph = function() {
 	var chart = new Highcharts.Chart(graph_config);
 };
 
+var parseDataPoints = function (categories) {
+	return _.map(categories, function(data, category) {
+		return {
+			category: category, 
+			data: _.map(data, pointFromData.bind(this))
+		};
+	}, this);
+}
+
+var pointFromData = function (point) {
+	return {
+		x_val: point[this.labels.x_axis],
+		y_val: point[this.labels.y_axis],
+	};
+}
+
 var labelsFromHeader = function (header) {
 	return {
 		category: header[0],
-		x_axis: 	header[1],
-		y_axis: 	header[2]
+		x_axis: header[1],
+		y_axis: header[2]
 	}
-}
-
-var extendWithLabelInfo = function (labels) {
-	return function (value, key) {
-		return {category: key, label: labels, data: value}
-	}
-}
-
-var groupByCategory = function (data, category) {
-	return _.groupBy(data, function(element) {
-		return element[category];
-	});
 }
 
 var buildGraphCategory = function (element) {
-	return new GraphCategory(element.category, element.label, element.data)
+	var data_type = this.attributes.xAxis.type;
+	return new GraphCategory(element.category, element.data, data_type)
 }

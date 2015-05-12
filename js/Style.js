@@ -97,7 +97,7 @@ Highcharts.theme = {
 			},
 			animation: {
 				easing: 'swing', 
-				duration: 1400
+				duration: 900
 			}
 		}
 	},

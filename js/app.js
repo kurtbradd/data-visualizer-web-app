@@ -12,7 +12,7 @@ var graph_types = {
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Age" },
-			xAxis: { allowDecimals: false }
+			xAxis: { type: "linear", allowDecimals: false }
 		}
 	},
 	country: {
@@ -20,7 +20,7 @@ var graph_types = {
 		attributes: {
 			chart: { type: "area" },
 			title: { text: "Country" },
-			xAxis: { allowDecimals: false }
+			xAxis: { type: "linear", allowDecimals: false }
 		}
 	},
 	genre1: {
@@ -29,9 +29,17 @@ var graph_types = {
 			chart: { type: "area" },
 			title: { text: "Genre By Age" },
 			subtitle: { text: "5 Year Bins" },
-			xAxis: { allowDecimals: false }
+			xAxis: { type: "linear", allowDecimals: false }	
 		}
-	}
+	},
+	epidemic: {
+		file_name: "/data/epidemic.csv",
+		attributes: {
+			chart: { type: "area" },
+			title: { text: "Epidemic" },
+			xAxis: { type: "datetime" }
+		}
+	},
 }
 
 //////////////////////////////////////////////////////////
