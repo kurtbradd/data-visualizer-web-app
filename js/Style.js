@@ -77,6 +77,9 @@ Highcharts.theme = {
 		enabled: false
 	},
 	plotOptions: {
+		line: {
+			lineWidth: 3.5
+		},
 		area: {
 			lineWidth: 3.5,
 			fillOpacity: 0.20,
