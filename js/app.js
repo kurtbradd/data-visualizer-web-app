@@ -32,6 +32,14 @@ var graph_types = {
 			xAxis: { type: "linear", allowDecimals: false }	
 		}
 	},
+	genre2: {
+		file_name: "/data/genrebyage.csv",
+		attributes: {
+			chart: { type: "area" },
+			title: { text: "Genre By Age" },
+			xAxis: { type: "linear", allowDecimals: false }	
+		}
+	},
 	epidemic: {
 		file_name: "/data/epidemic.csv",
 		attributes: {
