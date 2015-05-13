@@ -12,10 +12,10 @@ hdi 			-
 */
 
 // Local Scope
-var current_graph, high_chart_container;
-
+var current_graph, high_chart_container, topic_title;
 var graph_types = {
 	rem_1: {
+		tag: "rem_1",
 		file_name: "data/binned_age_rem.csv",
 		attributes: {
 			chart: { type: "area" },
@@ -25,6 +25,7 @@ var graph_types = {
 		}
 	},
 	rem_2: {
+		tag: "rem_2",
 		file_name: "data/binned_country_rem.csv",
 		attributes: {
 			chart: { type: "area" },
@@ -33,6 +34,7 @@ var graph_types = {
 		}
 	},
 	rem_3: {
+		tag: "rem_3",
 		file_name: "data/binned_genre_rem.csv",
 		attributes: {
 			chart: { type: "area" },
@@ -41,6 +43,7 @@ var graph_types = {
 		}
 	},
 	rem_4: {
+		tag: "rem_4",
 		file_name: "data/binned_genre_by_age_rem.csv",
 		attributes: {
 			chart: { type: "line" },
@@ -49,31 +52,35 @@ var graph_types = {
 		}
 	},
 	hdi_1: {
+		tag: "hdi_1",
 		file_name: "data/hdi_weekday.csv",
 		attributes: {
 			chart: { type: "line" },
-			title: { text: "HDI Weekday" },
+			title: { text: "Weekday" },
 			xAxis: { type: "category" }
 		}
 	},
 	hdi_2: {
+		tag: "hdi_2",
 		file_name: "data/hdi_all_countries_over_weekday.csv",
 		attributes: {
 			chart: { type: "line" },
-			title: { text: "HDI Week" },
+			title: { text: "Week" },
 			subtitle: { text: "All Countries Over Week" },
 			xAxis: { type: "category" }
 		}
 	},
 	hdi_3: {
+		tag: "hdi_3",
 		file_name: "data/hdi_regions_and_downloads.csv",
 		attributes: {
 			chart: { type: "line" },
-			title: { text: "HDI Regions & Downloads" },
+			title: { text: "Regions & Downloads" },
 			xAxis: { type: "category" }
 		}
 	},
 	rush_1: {
+		tag: "rush_1",
 		file_name: "data/rush_genre_preference.csv",
 		attributes: {
 			chart: { type: "column" },
@@ -82,6 +89,7 @@ var graph_types = {
 		}
 	},
 	rush_2: {
+		tag: "rush_2",
 		file_name: "data/rush_liveness.csv",
 		attributes: {
 			chart: { type: "column" },
@@ -91,6 +99,7 @@ var graph_types = {
 		}
 	},
 	rush_3: {
+		tag: "rush_3",
 		file_name: "data/rush_nostalgia.csv",
 		attributes: {
 			chart: { type: "column" },
@@ -99,28 +108,42 @@ var graph_types = {
 			yAxis: { min: 0}
 		}
 	},
-	epidemic: {
-		file_name: "data/epidemic.csv",
+	epidemic_1: {
+		tag: "epidemic_1",
+		file_name: "data/epidemic_1.csv",
 		attributes: {
 			chart: { type: "area" },
-			title: { text: "Epidemic" },
+			title: { text: "DuckSauce" },
 			xAxis: { type: "datetime" }
 		}
-	}
+	},
+	epidemic_2: {
+		tag: "epidemic_2",
+		file_name: "data/epidemic_2.csv",
+		attributes: {
+			chart: { type: "area" },
+			title: { text: "Alesha Dixon" },
+			xAxis: { type: "datetime" }
+		}
+	}	
 }
 
 var topic_data = {
 	reminiscence: {
 		title: "Reminiscence Bump",
-		graphs: []
+		graphs: [graph_types.rem_1, graph_types.rem_2, graph_types.rem_3, graph_types.rem_4]
 	},
 	epidemic: {
 		title: "Song Epidemic",
-		graphs: []
+		graphs: [graph_types.epidemic_1, graph_types.epidemic_2]
 	},
-	HDI: {
+	hdi: {
 		title: "HDI",
-		graphs: []
+		graphs: [graph_types.hdi_1, graph_types.hdi_2, graph_types.hdi_3]
+	},
+	rush: {
+		title: "Rush",
+		graphs: [graph_types.rush_1, graph_types.rush_2, graph_types.rush_3]
 	}
 }
 
@@ -128,34 +151,50 @@ var topic_data = {
 ///// PRIMARY METHODS
 //////////////////////////////////////////////////////////
 function initApp () {
-	var window_height = $(window).height();
-  high_chart_container = $("#highchart");
-  high_chart_container.css('height', window_height*0.7);
+	var window_height 		= $(window).height();
+	topic_title 					= $("#topic-title").first();
+  high_chart_container 	= $("#highchart");
+
+  high_chart_container.css('height', window_height*0.7); 
   buildNavButtons();
-  buildTopicButtons();
+  selectTopic('reminiscence');
 }
 
 //////////////////////////////////////////////////////////
 ///// HELPER METHODS
 //////////////////////////////////////////////////////////
 
-function buildNavButtons () {
-	var nav_button_group = $('#navbar-button-group');
-	_.forOwn(topic_data, function (topic, key) {
-		var li = $("<li>").text(topic.title);
-		var a = $("a").attr("href", "#");
-		// a.appendTo(li);
-		// li.appendTo(nav_button_group);
-	})
+function selectTopic (topic_name) {
+	$(".highcharts-container").remove();
+	current_graph = null;
+	var topic = topic_data[topic_name];
+	topic_title.text(topic.title)
+	buildButtonsForTopic(topic);
 }
 
-function buildTopicButtons () {
+function buildNavButtons () {
+	var items = [];
+	_.forOwn(topic_data, function (topic, key) {
+		var a = '<a id="navbar-button" name="'+key+'">'+topic.title+'</a>';
+	  items.push('<li>' + a + '</li>');
+	})
+	$('#navbar-button-group').append(items.join(''));
+	$('#navbar-button-group').on('click', 'a', navButtonEventHandler);
+}
+
+function navButtonEventHandler (event) {
+	var button = $(event.target);
+	selectTopic(button.attr('name'));
+}
+
+function buildButtonsForTopic (topic) {
 	var group_div = $('#button-group');
-	_.forOwn(graph_types, function (type, key) {
-		var btn_title = type.attributes.title.text;
+	group_div.empty();
+	_.forEach(topic.graphs, function (graph) {
+		var btn_title = graph.attributes.title.text;
 		var label = $("<label>").text(btn_title).addClass('btn btn-default large-button');
 		var input = 
-		$('<input type="radio" class="type_group">').attr({name: key}).change(dataSetSelcted);
+		$('<input type="radio" class="type_group">').attr({name: graph.tag}).change(dataSetSelcted);
 		input.appendTo(label);
 		label.appendTo(group_div);
 	})
@@ -179,6 +218,7 @@ function dataSetSelcted () {
 }
 
 function fetchDataSet (type, cb) {
+	console.log(type);
 	var baseTag = document.getElementsByTagName("base").item(0);
 	$.ajax({
 		url: baseTag.baseURI + graph_types[type].file_name, 
