@@ -22,7 +22,7 @@ Graph.prototype.drawGraph = function() {
 	var i = setInterval(function(){
     chart.addSeries(categories[count++]);
     if(count === categories.length) clearInterval(i);
-	}, 1000);
+	}, 1100);
 
 };
 
