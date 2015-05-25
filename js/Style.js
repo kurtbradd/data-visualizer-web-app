@@ -77,12 +77,16 @@ Highcharts.theme = {
 		enabled: false
 	},
 	plotOptions: {
+		column: {
+			pointPadding: 0.2,
+			borderWidth: 0
+    },
 		line: {
 			lineWidth: 3.5
 		},
 		area: {
 			lineWidth: 3.5,
-			fillOpacity: 0.20,
+			fillOpacity: 0.1,
 		},
 		areaspline: {
 			fillOpacity: 0.55,
