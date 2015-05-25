@@ -79,6 +79,17 @@ var graph_types = {
 			xAxis: { type: "category" }
 		}
 	},
+	hdi_4: {
+		tag: "hdi_4",
+		file_name: "data/hdi_genre_country_download_2011.csv",
+		attributes: {
+			chart: { type: "column" },
+			title: { text: "Genre by Country" },
+			xAxis: { type: "category" },
+			yAxis: { min: 0 },
+			plotOptions: { column: { stacking: 'normal'}}
+		}
+	},	
 	rush_1: {
 		tag: "rush_1",
 		file_name: "data/rush_genre_preference.csv",
@@ -140,6 +151,10 @@ var topic_data = {
 	hdi: {
 		title: "HDI",
 		graphs: [graph_types.hdi_1, graph_types.hdi_2, graph_types.hdi_3]
+	},
+	hdi: {
+		title: "HDI-NEW",
+		graphs: [graph_types.hdi_4]
 	},
 	rush: {
 		title: "Rush",
