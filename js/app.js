@@ -80,7 +80,23 @@ var graph_types = {
 			yAxis: { min: 0, max: 100.5, endOnTick: false},
 			plotOptions: { column: { stacking: 'normal'}}
 		}
-	},	
+	},
+	hdi_4: {
+		tag: "hdi_4",
+		file_name: "data/hdi_scatter_all.csv",
+		attributes: {
+			chart: { type: "scatter" },
+			title: { text: "Scatter" },
+			xAxis: { type: "scatter", startOnTick: true, endOnTick: true, showLastLabel: true },
+			tooltip: { enabled: true },
+			plotOptions: {
+				series: {
+					marker:{enabled: true}, 
+					states: {hover: {enabled: true}}
+				},
+			}
+		}
+	},
 	rush_1: {
 		tag: "rush_1",
 		file_name: "data/rush_genre_preference.csv",
@@ -141,7 +157,7 @@ var topic_data = {
 	},
 	hdi: {
 		title: "HDI",
-		graphs: [graph_types.hdi_1, graph_types.hdi_2, graph_types.hdi_3]
+		graphs: [graph_types.hdi_1, graph_types.hdi_2, graph_types.hdi_3, graph_types.hdi_4]
 	},
 	rush: {
 		title: "Rush",
