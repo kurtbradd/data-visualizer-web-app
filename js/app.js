@@ -77,7 +77,7 @@ var graph_types = {
 			chart: { type: "column" },
 			title: { text: "Top 10" },
 			xAxis: { type: "category" },
-			yAxis: { min: 0, max: 100 },
+			yAxis: { min: 0, max: 100.5, endOnTick: false},
 			plotOptions: { column: { stacking: 'normal'}}
 		}
 	},	
@@ -220,7 +220,6 @@ function dataSetSelcted () {
 }
 
 function fetchDataSet (type, cb) {
-	console.log(type);
 	var baseTag = document.getElementsByTagName("base").item(0);
 	$.ajax({
 		url: baseTag.baseURI + graph_types[type].file_name, 
