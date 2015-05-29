@@ -53,15 +53,6 @@ var graph_types = {
 	},
 	hdi_1: {
 		tag: "hdi_1",
-		file_name: "data/hdi_weekday.csv",
-		attributes: {
-			chart: { type: "line" },
-			title: { text: "Weekday" },
-			xAxis: { type: "category" }
-		}
-	},
-	hdi_2: {
-		tag: "hdi_2",
 		file_name: "data/hdi_all_countries_over_weekday.csv",
 		attributes: {
 			chart: { type: "line" },
@@ -70,8 +61,8 @@ var graph_types = {
 			xAxis: { type: "category" }
 		}
 	},
-	hdi_3: {
-		tag: "hdi_3",
+	hdi_2: {
+		tag: "hdi_2",
 		file_name: "data/hdi_regions_and_downloads.csv",
 		attributes: {
 			chart: { type: "line" },
@@ -79,14 +70,14 @@ var graph_types = {
 			xAxis: { type: "category" }
 		}
 	},
-	hdi_4: {
-		tag: "hdi_4",
-		file_name: "data/hdi_genre_country_download_2011.csv",
+	hdi_3: {
+		tag: "hdi_3",
+		file_name: "data/hdi_top10_stackbars.csv",
 		attributes: {
 			chart: { type: "column" },
-			title: { text: "Genre by Country" },
+			title: { text: "Top 10" },
 			xAxis: { type: "category" },
-			yAxis: { min: 0 },
+			yAxis: { min: 0, max: 100 },
 			plotOptions: { column: { stacking: 'normal'}}
 		}
 	},	
@@ -152,10 +143,6 @@ var topic_data = {
 		title: "HDI",
 		graphs: [graph_types.hdi_1, graph_types.hdi_2, graph_types.hdi_3]
 	},
-	hdi: {
-		title: "HDI-NEW",
-		graphs: [graph_types.hdi_4]
-	},
 	rush: {
 		title: "Rush",
 		graphs: [graph_types.rush_1, graph_types.rush_2, graph_types.rush_3]
@@ -172,7 +159,7 @@ function initApp () {
 
   high_chart_container.css('height', window_height*0.7); 
   buildNavButtons();
-  selectTopic('reminiscence');
+  selectTopic('hdi');
 }
 
 //////////////////////////////////////////////////////////
