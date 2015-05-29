@@ -90,6 +90,28 @@ Highcharts.theme = {
 		enabled: false
 	},
 	plotOptions: {
+		scatter: {
+      marker: {
+        radius: 5,
+        states: { 
+        	hover: { 
+        		enabled: true, 
+        		lineColor: 'rgb(100,100,100)' 
+        	} 
+        }
+      },
+      states: { 
+      	hover: { 
+      		marker: {
+      			enabled: true 
+      		}
+      	}
+      },
+			tooltip: {
+        headerFormat: '<b>{point.key}</b><br>',
+        pointFormat: '{series.name}',
+			}
+		},
 		column: {
 			pointPadding: 0.2,
 			borderWidth: 1
