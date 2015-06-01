@@ -4,13 +4,6 @@ $(document).ready(initApp);
 ///// VARIABLES
 //////////////////////////////////////////////////////////
 
-
-/*
-rem 			- age, country, genre, genre by age
-epidemic 	- duck sauce, breathe slow
-hdi 			-
-*/
-
 // Local Scope
 var current_graph, high_chart_container, topic_title;
 var graph_types = {
@@ -87,12 +80,17 @@ var graph_types = {
 		attributes: {
 			chart: { type: "scatter" },
 			title: { text: "Scatter" },
-			xAxis: { type: "scatter", startOnTick: true, endOnTick: true, showLastLabel: true },
+			xAxis: { 
+				type: "scatter", 
+				startOnTick: true, 
+				endOnTick: true, 
+				showLastLabel: true 
+			},
 			tooltip: { enabled: true },
 			plotOptions: {
 				series: {
-					marker:{enabled: true}, 
-					states: {hover: {enabled: true}}
+					marker:{ enabled: true}, 
+					states: { hover: { enabled: true}}
 				},
 			}
 		}
