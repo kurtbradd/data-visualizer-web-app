@@ -14,8 +14,10 @@ var scatterData = function (e, i) {
 	
 	return {
 		name: e.label,
-		color: colors[i],
-		marker: {states: {hover: {fillColor: colors[i]}}},
+		marker: {
+			fillColor: colors[i],
+			states: {hover: {fillColor: colors[i]}}
+		},
 		x: parseFloat(e.x_val),
 		y: parseFloat(e.y_val)
 	}
