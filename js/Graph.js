@@ -48,17 +48,17 @@ var labelsFromHeader = function (header) {
 	if (header.length == 4) {
 		return {
 			category: header[0],
-			label: header[1],
-			x_axis: header[2],
-			y_axis: header[3]
+			label: 		header[1],
+			x_axis: 	header[2],
+			y_axis: 	header[3]
 		}
 	}
 
 	return {
 		category: header[0],
-		label: header[0],
-		x_axis: header[1],
-		y_axis: header[2]
+		label: 		header[0],
+		x_axis: 	header[1],
+		y_axis: 	header[2]
 	}
 }
 
