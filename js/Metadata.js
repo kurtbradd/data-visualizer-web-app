@@ -81,7 +81,8 @@ var graphs = {
 			tooltip: { enabled: true },
 			plotOptions: {
 				series: {
-					marker:{ enabled: true}, 
+					color: "white",
+					marker:{ enabled: true},
 					states: { hover: { enabled: true}}
 				},
 			}
