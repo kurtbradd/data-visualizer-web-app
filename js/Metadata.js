@@ -78,6 +78,7 @@ var graphs = {
 				endOnTick: true, 
 				showLastLabel: true 
 			},
+			yAxis: { min: 0.4, max: 1, endOnTick: false},
 			tooltip: { enabled: true },
 			plotOptions: {
 				series: {
