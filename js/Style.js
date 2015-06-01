@@ -9,13 +9,15 @@ Highcharts.createElement('link', {
 //	"#DF5353", "#7798BF", "#aaeeee"],
 
 var colors = [
-	"#F89406", "#F4D03F", "#2b908f", "#90ee7e", "#86E2D5",
-	"#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", 
-	"#55BF3B", "#DF5353", "#7798BF", "#aaeeee", "#F22613",
-	"#D2527F", "#F62459", "#9A12B3", "#446CB3", "#52B3D9", 
-	"#19B5FE", "#26A65B", "#C8F7C5", "#2ECC71", "#95A5A6",
-	"#FDE3A7", "#1E824C", "#90C695", "#9B59B6", "#96281B",
-	"#E26A6A", "#65C6BB", "#E87E04", "#3FC380"]
+	"#F89406", "#F4D03F", "#2b908f", "#90ee7e", 
+	"#86E2D5", "#f45b5b", "#7798BF", "#aaeeee", 
+	"#ff0066", "#eeaaee", "#55BF3B", "#DF5353", 
+	"#7798BF", "#aaeeee", "#F22613", "#D2527F", 
+	"#F62459", "#9A12B3", "#446CB3", "#52B3D9", 
+	"#19B5FE", "#26A65B", "#C8F7C5", "#2ECC71", 
+	"#95A5A6", "#FDE3A7", "#1E824C", "#90C695", 
+	"#9B59B6", "#96281B", "#E26A6A", "#65C6BB", 
+	"#E87E04", "#3FC380"]
 
 Highcharts.theme = {
 	colors: _.shuffle(colors),
