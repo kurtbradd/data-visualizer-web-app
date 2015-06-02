@@ -149,6 +149,7 @@ Highcharts.theme = {
 		}
 	},
 	legend: {
+		useHTML: true,
 		title: {
 			style: {
 				color: '#A0A0A3',
