@@ -1,6 +1,7 @@
 function GraphCategory (name, data, data_type) {
 	this.name = name;
 	this.data = parseData.bind(this)(data, data_type);
+	if (data_type === "scatter") this.linkedTo = name;
 }
 
 var parseData = function (data, data_type) {
@@ -11,7 +12,6 @@ var parseData = function (data, data_type) {
 }
 
 var scatterData = function (e, i) {
-	
 	return {
 		name: e.label,
 		marker: {

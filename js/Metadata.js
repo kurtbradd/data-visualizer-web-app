@@ -74,31 +74,37 @@ var graphs = {
 			title: { text: "Genre & HDI" },
 			series: [{
         type: 'line',
-        color: "green",
-        name: 'Income Regression',
+        id: "Income Index",
+        color: "#2ECC71",
+        dashStyle: "LongDash",
+        name: 'Income Index<br>R<sup>2</sup> = 0.096<br>p = 0.079',
         data: [[0.07527, 0.8964], [0.15133844, 0.74625]],
         marker: { enabled: false },
         states: { hover: { lineWidth: 0 } },
         enableMouseTracking: false
       },{
         type: 'line',
-        color: "yellow",
-        name: 'Education Regression',
+        id: "Education Index",
+        color: "#E87E04",
+        dashStyle: "ShortDot",
+        name: 'Education Index<br>R<sup>2</sup> = 0.138<br>p = 0.033*',
         data: [[0.07527, 0.8256], [0.15133844, 0.63423]],
         marker: { enabled: false },
         states: { hover: { lineWidth: 0 } },
         enableMouseTracking: false
       },{
         type: 'line',
-        color: "red",
-        name: 'HDI Regression',
+        id: "HDI 2010",
+        color: "#F22613",
+        name: 'HDI 2010<br>R<sup>2</sup> = 0.169<br>p = 0.017*',
         data: [[0.07527, 0.88255], [0.15133844, .70828]],
         marker: { enabled: false },
         states: { hover: { lineWidth: 0 } },
         enableMouseTracking: false
       }],
-			xAxis: { 
+			xAxis: {
 				type: "scatter", 
+				tickInterval: 0.01,
 				startOnTick: true, 
 				endOnTick: true, 
 				showLastLabel: true 
@@ -120,7 +126,6 @@ var graphs = {
 		attributes: {
 			chart: { type: "line" },
 			title: { text: "SE Asia" },
-			// subtitle: { text: "All Countries Over Week" },
 			xAxis: { type: "category" }
 		}
 	},
@@ -184,7 +189,7 @@ var topics = {
 	},
 	hdi: {
 		title: "HDI",
-		graphs: [graphs.hdi_1, graphs.hdi_2, graphs.hdi_3, graphs.hdi_4, graphs.hdi_5]
+		graphs: [graphs.hdi_1, graphs.hdi_2, graphs.hdi_5, graphs.hdi_3, graphs.hdi_4]
 	},
 	rush: {
 		title: "Rush",
