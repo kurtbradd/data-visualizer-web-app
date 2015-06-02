@@ -7,7 +7,7 @@ var parseData = function (data, data_type) {
 	if (data_type === "linear") 	return _.map(data, linearData);
 	if (data_type === "datetime") return _.map(data, datetimeData);
 	if (data_type === "category") return _.map(data, categoryData);
-	if (data_type === "scatter") return _.map(data, scatterData);
+	if (data_type === "scatter") 	return _.map(data, scatterData);
 }
 
 var scatterData = function (e, i) {
