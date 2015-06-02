@@ -60,7 +60,7 @@ var graphs = {
 		file_name: "data/hdi_top10_stackbars.csv",
 		attributes: {
 			chart: { type: "column" },
-			title: { text: "Top 10" },
+			title: { text: "Top 10 Genres" },
 			xAxis: { type: "category" },
 			yAxis: { min: 0, max: 100.5, endOnTick: false},
 			plotOptions: { column: { stacking: 'normal'}}
@@ -71,7 +71,32 @@ var graphs = {
 		file_name: "data/hdi_scatter_all.csv",
 		attributes: {
 			chart: { type: "scatter" },
-			title: { text: "Scatter" },
+			title: { text: "Genre & HDI" },
+			series: [{
+        type: 'line',
+        color: "green",
+        name: 'Income Regression',
+        data: [[0.07527, 0.8964], [0.15133844, 0.74625]],
+        marker: { enabled: false },
+        states: { hover: { lineWidth: 0 } },
+        enableMouseTracking: false
+      },{
+        type: 'line',
+        color: "yellow",
+        name: 'Education Regression',
+        data: [[0.07527, 0.8256], [0.15133844, 0.63423]],
+        marker: { enabled: false },
+        states: { hover: { lineWidth: 0 } },
+        enableMouseTracking: false
+      },{
+        type: 'line',
+        color: "red",
+        name: 'HDI Regression',
+        data: [[0.07527, 0.88255], [0.15133844, .70828]],
+        marker: { enabled: false },
+        states: { hover: { lineWidth: 0 } },
+        enableMouseTracking: false
+      }],
 			xAxis: { 
 				type: "scatter", 
 				startOnTick: true, 
@@ -87,6 +112,16 @@ var graphs = {
 					states: { hover: { enabled: true}}
 				},
 			}
+		}
+	},
+	hdi_5: {
+		tag: "hdi_5",
+		file_name: "data/hdi_weekday_SEAsia.csv",
+		attributes: {
+			chart: { type: "line" },
+			title: { text: "SE Asia" },
+			// subtitle: { text: "All Countries Over Week" },
+			xAxis: { type: "category" }
 		}
 	},
 	rush_1: {
@@ -149,7 +184,7 @@ var topics = {
 	},
 	hdi: {
 		title: "HDI",
-		graphs: [graphs.hdi_1, graphs.hdi_2, graphs.hdi_3, graphs.hdi_4]
+		graphs: [graphs.hdi_1, graphs.hdi_2, graphs.hdi_3, graphs.hdi_4, graphs.hdi_5]
 	},
 	rush: {
 		title: "Rush",
