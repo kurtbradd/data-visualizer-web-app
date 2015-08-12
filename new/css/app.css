@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  padding-top: 120px;
+  color: white;
+  font-family:Lato,sans-serif;
+
+  -webkit-background-size:cover!important;
+  -moz-background-size:   cover!important;
+  -o-background-size:     cover!important;
+  background-size:        cover!important;
+
+  background: -webkit-linear-gradient(#2a2a2b, #3e3e40);
+  background: -o-linear-gradient(#2a2a2b, #3e3e40); 
+  background: -moz-linear-gradient(#2a2a2b, #3e3e40);
+  background: linear-gradient(#2a2a2b, #3e3e40);
+  background-attachment: fixed;
+}
+
+.jumbotron {
+  background-color: #737373 !important;
+}
+
+.main-content {
+  padding-top: 40px;
+}
+
+.navbar-brand, .navbar-nav li a {
+  font-size: 23px;
+  line-height: 120px;
+  height: 120px;
+  padding-top: 0;
+}
+
+.large-button,
+.navbar-nav li a {
+  font-size: 18px !important;
+}
+
+.large-button,
+.navbar-nav li a {
+  font-size: 18px !important;
+}

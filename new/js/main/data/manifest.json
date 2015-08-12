@@ -1,0 +1,41 @@
+{
+	"reminiscence": [
+		{
+			"tag": "rem_1",
+			"file_name": "data/binned_age_rem.csv",
+			"attributes": {
+				"chart": { "type": "area" },
+				"title": { "text": "Age" },
+				"subtitle": { "text": "5 Year Bins" },
+				"xAxis": { "type": "category", "allowDecimals": false }
+				}
+		},{
+			"tag": "rem_2",
+			"file_name": "data/binned_country_rem.csv",
+			"attributes": {
+				"chart": { "type": "area" },
+				"title": { "text": "Country" },
+				"xAxis": { "type": "category", "allowDecimals": false }
+			}
+		},{
+			"tag": "rem_3",
+			"file_name": "data/binned_genre_rem.csv",
+			"attributes": {
+				"chart": { "type": "area" },
+				"title": { "text": "Genre" },
+				"xAxis": { "type": "category" }
+			}
+		},{
+			"tag": "rem_4",
+			"file_name": "data/binned_genre_by_age_rem.csv",
+			"attributes": {
+				"chart": { "type": "line" },
+				"title": { "text": "Genre By Age" },
+				"xAxis": { "type": "category" }
+			}
+		}
+	],
+	"epidemic": [],
+	"hdi": [],
+	"rush": []
+}
