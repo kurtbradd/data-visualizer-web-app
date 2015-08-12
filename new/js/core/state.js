@@ -1,8 +1,9 @@
 // Application Level State
-app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
+  function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $urlRouterProvider.when('', '/');
-
+  $locationProvider.html5Mode(true);
 
   $stateProvider
     .state('app', {

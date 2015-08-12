@@ -36,6 +36,96 @@
 		}
 	],
 	"epidemic": [],
-	"hdi": [],
+	"hdi": [
+		{
+			"tag": "hdi_1",
+			"file_name": "data/hdi_all_countries_over_weekday.csv",
+			"attributes": {
+				"chart": { "type": "line" },
+				"title": { "text": "Week" },
+				"subtitle": { "text": "All Countries Over Week" },
+				"xAxis": { "type": "category" }
+			}
+		},{
+			"tag": "hdi_2",
+			"file_name": "data/hdi_regions_and_downloads.csv",
+			"attributes": {
+				"chart": { "type": "line" },
+				"title": { "text": "Regions & Downloads" },
+				"xAxis": { "type": "category" }
+			}
+		},{
+			"tag": "hdi_3",
+			"file_name": "data/hdi_top10_stackbars.csv",
+			"attributes": {
+				"chart": { "type": "column" },
+				"title": { "text": "Top 10 Genres" },
+				"xAxis": { "type": "category" },
+				"yAxis": { "min": 0, "max": 100.5, "endOnTick": false},
+				"plotOptions": { "column": { "stacking": "normal"}}
+			}
+		},{
+			"tag": "hdi_4",
+			"file_name": "data/hdi_scatter_all.csv",
+			"attributes": {
+				"chart": { "type": "scatter" },
+				"title": { "text": "Genre & HDI" },
+				"series": [{
+		      "type": "line",
+		      "id": "Income Index",
+		      "color": "#2ECC71",
+		      "dashStyle": "LongDash",
+		      "name": "Income Index<br>R<sup>2</sup> = 0.096<br>p = 0.079",
+		      "data": [[0.07527, 0.8964], [0.15133844, 0.74625]],
+		      "marker": { "enabled": false },
+		      "states": { "hover": { "lineWidth": 0 } },
+		      "enableMouseTracking": false
+		    },{
+		      "type": "line",
+		      "id": "Education Index",
+		      "color": "#E87E04",
+		      "dashStyle": "ShortDot",
+		      "name": "Education Index<br>R<sup>2</sup> = 0.138<br>p = 0.033*",
+		      "data": [[0.07527, 0.8256], [0.15133844, 0.63423]],
+		      "marker": { "enabled": false },
+		      "states": { "hover": { "lineWidth": 0 } },
+		      "enableMouseTracking": false
+		    },{
+		      "type": "line",
+		      "id": "HDI 2010",
+		      "color": "#F22613",
+		      "name": "HDI 2010<br>R<sup>2</sup> = 0.169<br>p = 0.017*",
+		      "data": [[0.07527, 0.88255], [0.15133844, 0.70828]],
+		      "marker": { "enabled": false },
+		      "states": { "hover": { "lineWidth": 0 } },
+		      "enableMouseTracking": false
+		    }],
+				"xAxis": {
+					"type": "scatter", 
+					"tickInterval": 0.01,
+					"startOnTick": true, 
+					"endOnTick": true, 
+					"showLastLabel": true 
+				},
+				"yAxis": { "min": 0.4, "max": 1, "endOnTick": false},
+				"tooltip": { "enabled": true },
+				"plotOptions": {
+					"series": {
+						"color": "white",
+						"marker":{ "enabled": true},
+						"states": { "hover": { "enabled": true}}
+					}
+				}
+			}
+		},{
+			"tag": "hdi_5",
+			"file_name": "data/hdi_weekday_SEAsia.csv",
+			"attributes": {
+				"chart": { "type": "line" },
+				"title": { "text": "SE Asia" },
+				"xAxis": { "type": "category" }
+			}
+		}
+	],
 	"rush": []
 }

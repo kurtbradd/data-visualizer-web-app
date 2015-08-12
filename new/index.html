@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
   <link type="text/css" rel="stylesheet" href="css/app.css"/>
+  <base href="/">
 </head>
 <body>
 
@@ -20,7 +21,6 @@
 
   <div ui-view="navbar"></div>
   <div ui-view="main"></div>
-  <!-- <div ui-view></div> -->
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -28,6 +28,9 @@
   <script src="js/lib/angular.js"></script>
   <script src="js/lib/angular-ui-router.js"></script>
   <script src="js/lib/jquery-2.1.4.min.js"></script>
+  <script src="js/lib/lodash.min.js"></script>
+  <script src="js/lib/highcharts.js"></script>
+  <script src="js/lib/highchart-style.js"></script>
   <script src="js/lib/bootstrap.min.js"></script>
   <script src="js/lib/papaparse.min.js"></script>
 
@@ -53,6 +56,8 @@
   <script src="js/main/controllers/TopicCtrl.js"></script>
   <!-- SERVICES -->
   <script src="js/main/services/ProjectService.js"></script>
+  <!-- DIRECTIVES -->
+  <script src="js/main/directives/HighchartDirective.js"></script>
 
 </body>
 </html>
