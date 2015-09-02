@@ -129,6 +129,114 @@ var graphs = {
 			xAxis: { type: "category" }
 		}
 	},
+	hdi_6: {
+		tag: "hdi_6",
+		file_name: "data/hdi_median.csv",
+		attributes: {
+			chart: { type: "scatter" },
+			title: { text: "Median & HDI" },
+			series: [{
+        type: 'line',
+        id: "Income Index",
+        color: "#2ECC71",
+        dashStyle: "LongDash",
+        name: 'Income Index<br>R<sup>2</sup> = 0.2304<br>p < 0.01*',
+        data: [[0.112, 0.922], [0.242, 0.688]],
+        marker: { enabled: false },
+        states: { hover: { lineWidth: 0 } },
+        enableMouseTracking: false
+      },{
+        type: 'line',
+        id: "Education Index",
+        color: "#E87E04",
+        dashStyle: "ShortDot",
+        name: 'Education Index<br>R<sup>2</sup> = 0.1521<br>p < 0.05*',
+        data: [[0.112, 0.834], [0.242, 0.626]],
+        marker: { enabled: false },
+        states: { hover: { lineWidth: 0 } },
+        enableMouseTracking: false
+      },{
+        type: 'line',
+        id: "HDI 2010",
+        color: "#F22613",
+        name: 'HDI 2010<br>R<sup>2</sup> = 0.1521<br>p < 0.04*',
+        data: [[0.112, 0.8893], [0.242, 0.71]],
+        marker: { enabled: false },
+        states: { hover: { lineWidth: 0 } },
+        enableMouseTracking: false
+      }],
+			xAxis: {
+				type: "scatter", 
+				tickInterval: 0.01,
+				startOnTick: true, 
+				endOnTick: true, 
+				showLastLabel: true 
+			},
+			yAxis: { min: 0.4, max: 1, endOnTick: false},
+			tooltip: { enabled: true },
+			plotOptions: {
+				series: {
+					color: "white",
+					marker:{ enabled: true},
+					states: { hover: { enabled: true}}
+				},
+			}
+		}
+	},
+	hdi_7: {
+		tag: "hdi_7",
+		file_name: "data/hdi_enrolment.csv",
+		attributes: {
+			chart: { type: "scatter" },
+			title: { text: "Enrolment & HDI" },
+			series: [{
+        type: 'line',
+        id: "Gross Primary Enrolment Ratio",
+        color: "#2ECC71",
+        dashStyle: "LongDash",
+        name: 'Gross Primary Enrolment Ratio<br>R<sup>2</sup> = 0.2304<br>p < 0.01*',
+        data: [[0.112, 80], [0.242, 110]],
+        marker: { enabled: false },
+        states: { hover: { lineWidth: 0 } },
+        enableMouseTracking: false
+      },{
+        type: 'line',
+        id: "Gross Tertiary Enrolment Ratio",
+        color: "#E87E04",
+        dashStyle: "ShortDot",
+        name: 'Gross Tertiary Enrolment Ratio<br>R<sup>2</sup> = 0.1521<br>p < 0.05*',
+        data: [[0.112, 90], [0.242, 70]],
+        marker: { enabled: false },
+        states: { hover: { lineWidth: 0 } },
+        enableMouseTracking: false
+      },{
+        type: 'line',
+        id: "Combined Gross Enrolment in Education Both Sexes",
+        color: "#F22613",
+        name: 'Combined Gross Enrolment in Education Both Sexes<br>R<sup>2</sup> = 0.1521<br>p < 0.04*',
+        data: [[0.112, 90], [0.242, 60]],
+        marker: { enabled: false },
+        states: { hover: { lineWidth: 0 } },
+        enableMouseTracking: false
+      }],
+			xAxis: {
+				type: "scatter", 
+				tickInterval: 0.01,
+				startOnTick: true, 
+				endOnTick: true, 
+				showLastLabel: true 
+				},
+			yAxis: { min: 40, max: 130, endOnTick: true},
+			tooltip: { enabled: true },
+			plotOptions: {
+				series: {
+					color: "white",
+					marker:{ enabled: true},
+					states: { hover: { enabled: true}}
+				},
+			}
+		}
+	},
 	rush_1: {
 		tag: "rush_1",
 		file_name: "data/rush_genre_preference.csv",
@@ -175,6 +283,54 @@ var graphs = {
 			title: { text: "Alesha Dixon" },
 			xAxis: { type: "datetime" }
 		}
+	},
+	bw_1: {
+		tag: "bw_1",
+		file_name: "data/bw_1.csv",
+		attributes: {
+			chart: { type: "column" },
+			title: { text: "Country" },
+			subtitle: {text: "Big Wreck Top Fans by Country"},
+			xAxis: { type: "category" },
+			yAxis: { tickInterval: 0.05},
+			legend: { enabled:false }
+		}
+	},
+	bw_2: {
+		tag: "bw_2",
+		file_name: "data/bw_2.csv",
+		attributes: {
+			chart: { type: "area" },
+			title: { text: "Age" },
+			subtitle: {text: "Big Wreck Top Fans by Age"},
+			xAxis: { type: "category", min: 0.5, max:5.5},
+			yAxis: { tickInterval: 0.05 },
+			legend: { enabled: false }
+		}
+	},
+	bw_3: {
+		tag: "bw_3",
+		file_name: "data/bw_3.csv",
+		attributes: {
+			chart: { type: "bar" },
+			title: { text: "Sex" },
+			subtitle: {text: "Big Wreck Top Fans by Sex"},
+			xAxis: { title:{text:""}, type: "category"},
+			yAxis: { max: 1, tickInterval: 0.1},
+			plotOptions: { bar: { stacking: 'normal'}}
+		}
+	},
+	bw_4: {
+		tag: "bw_4",
+		file_name: "data/bw_4.csv",
+		attributes: {
+			chart: { type: 'pie' },
+			title: { text: "Genre Preferences" },
+			subtitle: {text: "Big Wreck Top Fans by Genre Preferences"},
+			xAxis: { type: "category" },
+			plotOptions: { pie:{allowPointSelect: true, cursor: 'pointer',dataLabels: {enabled: true}, showInLegend: true } },
+			tooltip: { enabled: true },
+		}
 	}	
 }
 
@@ -189,11 +345,15 @@ var topics = {
 	},
 	hdi: {
 		title: "HDI",
-		graphs: [graphs.hdi_1, graphs.hdi_2, graphs.hdi_5, graphs.hdi_3, graphs.hdi_4]
+		graphs: [graphs.hdi_1, graphs.hdi_2, graphs.hdi_5, graphs.hdi_3, graphs.hdi_4, graphs.hdi_6, graphs.hdi_7]
 	},
 	rush: {
 		title: "Rush",
 		graphs: [graphs.rush_1, graphs.rush_2, graphs.rush_3]
+	},
+	bw: {
+		title: "Big Wreck",
+		graphs: [graphs.bw_1, graphs.bw_2, graphs.bw_3, graphs.bw_4]
 	}
 }
 
