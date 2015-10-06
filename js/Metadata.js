@@ -330,8 +330,19 @@ var graphs = {
 			xAxis: { type: "category" },
 			plotOptions: { pie:{allowPointSelect: true, cursor: 'pointer',dataLabels: {enabled: true}, showInLegend: true } },
 			tooltip: { enabled: true },
+		}	
+	},
+	xhead_1: {
+		tag: "xhead_1",
+		file_name: "data/xhead_1.csv",
+		attributes: {
+			chart: { type: 'line' },
+			title: { text: 'X-Head Proportions' },
+			xAxis: { type: "category" },
+			yAxis: { min: 0 },
+			subtitle: {text: 'Proportion within each X-head subgroup of preferred genre'}
 		}
-	}	
+	}		
 }
 
 var topics = {
@@ -354,6 +365,10 @@ var topics = {
 	bw: {
 		title: "Big Wreck",
 		graphs: [graphs.bw_1, graphs.bw_2, graphs.bw_3, graphs.bw_4]
+	},
+	leaky: {
+		title: "X-Head Data",
+		graphs: [graphs.xhead_1]
 	}
 }
 
