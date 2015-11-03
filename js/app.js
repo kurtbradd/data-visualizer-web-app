@@ -29,7 +29,12 @@ function initApp () {
 
 function selectTopic (topic_name) {
 	$(".highcharts-container").remove();
-	current_graph = null;
+
+	if (current_graph) {
+		current_graph.stopDrawing();
+		current_graph = null;
+	}
+	
 	var topic = topic_data[topic_name];
 	topic_title.text(topic.title)
 	buildButtonsForTopic(topic);
