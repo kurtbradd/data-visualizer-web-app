@@ -1,10 +1,15 @@
 function Graph (attributes, data) {
+	this.chart_interval = {};
 	this.attributes = attributes;
 	this.labels 		= labelsFromHeader(data.header);
 	
 	var grouped 		= _.groupBy(data.rows, this.labels.category);
 	var points 			= parseDataPoints.bind(this)(grouped);
 	this.categories = _.map(points, buildGraphCategory.bind(this));
+}
+
+Graph.prototype.stopDrawing = function () {
+	clearInterval(this.chart_interval);	
 }
 
 Graph.prototype.drawGraph = function() {
@@ -20,9 +25,12 @@ Graph.prototype.drawGraph = function() {
 	var categories = this.categories;
 	var count = 0;
 	chart.addSeries(categories[count++]);
-	var i = setInterval(function(){
+
+	this.chart_interval = setInterval(function() {
     chart.addSeries(categories[count++]);
-    if(count === categories.length) clearInterval(i);
+    if (count === categories.length) {
+    	clearInterval(this.chart_interval);
+    }
 	}, 1100);
 
 };
