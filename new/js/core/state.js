@@ -16,6 +16,9 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         },
         'main': {
           templateUrl: 'js/core/templates/main.tpl.html'
+        },
+        'footer': {
+          templateUrl: 'js/core/templates/footer.tpl.html'
         }
       }
     })
