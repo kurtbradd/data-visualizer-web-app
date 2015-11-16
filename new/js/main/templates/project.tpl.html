@@ -1,11 +1,28 @@
-<h1 class="pull-left">{{title}}</h1>
+<div class="container">
+	
+	<div class="row">
+		<div class="col-xs-12">
+				
+			<div class="page-header">
+				<h1>{{title}}</h1>	
+			</div>
 
-<div class="page-header">
-	<div ng-repeat="topic in project_topics">
-		<div ui-sref="app.projects.topic({topic: topic.attributes.title.text})" class="btn-group btn-group-right pull-right">
-			<button class="btn btn-default">{{topic.attributes.title.text}}</button>
+			
+			<div ng-repeat="topic in project_topics">
+				<div 
+				ui-sref="app.projects.topic({topic: topic.attributes.title.text})" 
+				class="btn-group btn-group-left pull-left">
+					<button class="btn btn-default">{{topic.attributes.title.text}}</button>
+				</div>
+			</div>	
+
 		</div>
 	</div>
-	<div class="clearfix"></div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div ui-view></div>
+		</div>
+	</div>
+
 </div>
-<div ui-view></div>
