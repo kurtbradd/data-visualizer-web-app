@@ -3,6 +3,7 @@
 app.factory('Projects', ['$http', function ($http) {
 
 	var manifest_url = "js/main/data/manifest.json";
+	var metadata = null;
 
 	var parseCSV = function (csv, cb) {
 		Papa.parse(csv, {
@@ -18,8 +19,10 @@ app.factory('Projects', ['$http', function ($http) {
 	}
 
 	var getMetadata = function (cb) {
+		if (metadata) return cb(null, metadata);
 		return $http.get(manifest_url).then(function (data) {
-			return cb(null, data.data)
+			metadata = data.data;
+			return cb(null, metadata);
 		}, cb);
 	}
 
@@ -35,6 +38,8 @@ app.factory('Projects', ['$http', function ($http) {
 		epidemic: "Song Epidemic",
 		hdi: "HDI",
 		rush: "Rush",
+		xhead: "X-Head",
+		bigwreck: "Big Wreck"
 	}
 
 	return {
@@ -42,6 +47,5 @@ app.factory('Projects', ['$http', function ($http) {
 		getMetadata: getMetadata,
 		getTopicData: getTopicData
 	}
-
 
 }]);

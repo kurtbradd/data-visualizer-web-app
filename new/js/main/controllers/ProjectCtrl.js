@@ -1,5 +1,4 @@
-app.controller('ProjectCtrl', ['$scope', '$stateParams', 'Projects', 
-	function($scope, $stateParams, Projects) {
+app.controller('ProjectCtrl', ['$scope', '$stateParams', 'Projects', function($scope, $stateParams, Projects) {
 	
 	var project_name = $stateParams.project;
 	$scope.title = Projects.titles[project_name];
