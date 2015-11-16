@@ -30,6 +30,17 @@ Highcharts.theme = {
 		renderTo: 'highchart',
 		zoomType: 'x',
 		plotBorderColor: '#606063',
+		resetZoomButton: {
+			theme: {
+				fill: "#737373",
+				stroke: "#fff",
+				style: { 
+					color: "white",
+					fontSize: '15px',
+					fontWeight: 'light'
+				}
+			}
+		}
 	},
 	title: {
 		style: {
