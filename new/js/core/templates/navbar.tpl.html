@@ -9,8 +9,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" ui-sref="app.home">
-				<img class="logo logo-dml" src="img/dml_logo_clear.png">
+			<a class="navbar-brand" href="http://future.mcmaster.ca/">
+				<img class="logo logo-mcmaster" src="img/mcmaster_logo_white.gif">
+			</a>
+			<a class="navbar-brand" href="http://www.digitalmusiclab.org">
+				<img class="logo" src="img/dml_logo_clear.png">
 			</a>
 		</div>
 
@@ -20,17 +23,14 @@
 
 			<!-- LEFT ITEMS -->
 			<ul class="nav navbar-nav" id="navbar-button-group">
+				<li ui-sref-active="active">
+					<a ui-sref="app.home">{{ "Home" | uppercase}}</a>
+				</li>
 				<li ng-repeat="item in items" ui-sref-active="active">
 					<a ui-sref="app.projects({project: item})">{{ item | uppercase}}</a>
 				</li>
 			</ul>
 
-			<!-- RIGHT ITEMS -->
-			<ul class="nav navbar-nav navbar-right">
-				<li>
-					<img alt="McMaster University" class="logo logo-mcmaster" src="img/mcmaster_logo_white.gif">
-				</li>
-			</ul>
 		</div>
 
 
