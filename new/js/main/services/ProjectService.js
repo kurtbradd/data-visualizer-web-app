@@ -33,10 +33,16 @@ app.factory('Projects', ['$http', function ($http) {
 		}, cb);
 	}
 
+	var getProjectDescription = function (topic_name, cb) {
+		var url = '/js/main/data/descriptions.json'
+		$http.get(url).then(function (data) {
+			return cb(null, data.data[topic_name]);
+		}, cb);
+	}
+
 	var project_titles = {
 		reminiscence: "Reminiscence Bump",
-		epidemic: "Song Epidemic",
-		hdi: "HDI",
+		hdi: "Human Development Index (HDI)",
 		rush: "Rush",
 		xhead: "X-Head",
 		bigwreck: "Big Wreck"
@@ -45,7 +51,8 @@ app.factory('Projects', ['$http', function ($http) {
 	return {
 		titles: project_titles,
 		getMetadata: getMetadata,
-		getTopicData: getTopicData
+		getTopicData: getTopicData,
+		getProjectDescription: getProjectDescription
 	}
 
 }]);

@@ -2,25 +2,45 @@
 	
 	<div class="row">
 		<div class="col-xs-12">
-			
-			<div class="page-header">
-				
-				<h1>{{title}}</h1>	
-				<div class= "btn-group btn-group-justified">
-					<label 
-						class="btn btn-default btn-topic"
-						ng-repeat="topic in project_topics"
-						ui-sref="app.projects.topic({topic: topic.attributes.title.text})"
-						>
-						{{topic.attributes.title.text | uppercase}}
-					</label>
-				</div>
 
+			<!-- PROJECT TITLE -->
+			<h1>
+				{{title}}
+				<!-- SHOW IF USING MIXRADIO DATA -->
+				<span ng-show="hasMixedRadio" class="mixradio-data">
+					(data from MixRadio)
+				</span>
+				<!-- SHOW IF HAS PROJECT DESCRIPTION -->
+				<span ng-show="project_description">
+					<label 
+						data-target="#project_description" 
+						class="btn btn-default btn-topic margin-bottom pull-right" 
+						data-toggle="collapse">Info
+					</label>
+				</span>
+			</h1>
+
+			
+			<!-- PROJECT DESCRIPTION -->
+			<div id="project_description" class="collapse margin-bottom">
+				{{project_description}}
+			</div>
+
+			<!-- PROJECT TOPIC BUTTON GROUPS -->
+			<div class= "btn-group btn-group-justified margin-bottom">
+				<label 
+					class="btn btn-default btn-topic"
+					ng-repeat="topic in project_topics"
+					ui-sref-active="active"
+					ui-sref="app.projects.topic({topic: topic.attributes.title.text})"
+					>{{topic.attributes.title.text | uppercase}}
+				</label>
 			</div>
 
 		</div>
 	</div>
 
+	<!-- PROJECT TOPIC VIEW -->
 	<div ui-view></div>
 
 </div>
