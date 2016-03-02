@@ -6,7 +6,7 @@
 			"attributes": {
 				"chart": 		{ "type": "area" },
 				"title": 		{ "text": "Age" },
-				"subtitle": { "text": "5 Year Bins" },
+				"subtitle": 	{ "text": "5 Year Bins" },
 				"xAxis": 		{ "type": "category", "allowDecimals": false }
 			}
 		},{

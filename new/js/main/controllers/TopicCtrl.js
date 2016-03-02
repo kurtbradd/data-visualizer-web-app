@@ -97,19 +97,19 @@ app.controller('TopicCtrl', ['$scope', '$stateParams', 'Projects', '$state',
 
 	var buildGraphCategory = function (category) {
 		var data_type 		= this.xAxis.type;
-		var category_name = category.category;
-		var linkedTo 			= (data_type === "scatter") ? category_name : null;
-		var parser 				= new pointParser();
-		var points 				= _.map(category.data, parser[data_type]);
+		var category_name 	= category.category;
+		var linkedTo 		= (data_type === "scatter") ? category_name : null;
+		var parser 			= new pointParser();
+		var points 			= _.map(category.data, parser[data_type]);
 		return {name: category_name, data: points, linkedTo: linkedTo};
 	}
 
 	var buildGraph = function (data) {
-		var attributes 			= $scope.topic.attributes;
-		var labels 					= labelsFromHeader(data.header);
+		var attributes 		= $scope.topic.attributes;
+		var labels 			= labelsFromHeader(data.header);
 		var category_data 	= _.groupBy(data.rows, labels.category);
 		var category_points = _.map(category_data, categoryDataPoints.bind(labels));
-		var graph_series 		= _.map(category_points, buildGraphCategory.bind(attributes));
+		var graph_series 	= _.map(category_points, buildGraphCategory.bind(attributes));
 		drawGraph(graph_series, attributes, labels);
 	}
 
