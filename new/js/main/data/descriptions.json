@@ -1,0 +1,26 @@
+{
+	"reminiscence": {
+		"mixradio" : true,
+		"description": "Using an online musical-preference survey conducted among 5000 participants, this research explores questions relating to the “reminiscence bump” phenomenon—the enhanced recall of events that occur in adolescence and early adulthood. For example, are musical reminiscences consistent across people belonging to different age groups and different countries? Our results suggest that music from the reminiscence bump period (15-20 years of age) is recalled to a greater degree, irrespective of how old you are, in which country you live, and your preferred musical genre. These findings can be explored using the various graph tabs, which display data relating to people’s ages, preferred genre, and the countries in which they live. Genre info is provided by our MixRadio database."
+	},
+	"epidemic": {
+		"mixradio" : true,
+		"description": "How does a song become popular and how is it that certain songs become so much more popular than others? What are the underlying social mechanisms that drive these processes? The rapidity with which some songs gain popularity often leads to them being described as 'contagious' or 'infectious'. Upon closer examination, we find that the download time series for many popular songs do resemble epidemic curves derived from case report data for infectious diseases. This correspondence suggests an interesting link between the fields of infectious disease research and music research: perhaps ideas from epidemiological modelling might be useful in investigating how certain songs 'spread' through human populations, and perhaps employing disease epidemic models might help to better understand the mechanisms underlying song popularity. We use a standard epidemiological model to study song download data from Great Britain spanning a seven year period and aggregated at various timescales. In conducting this work, we seek to elucidate the underlying social processes that drive song popularity and to investigate how they are similar to and different from disease transmission."
+	},
+	"hdi": {
+		"mixradio" : true,
+		"description": "Human development is addressed with respect to the United Nation’s Human Development Index (HDI), a composite statistic ranging from 0 (undeveloped) to 1 (highly developed). Rather than merely industrial output, the HDI expresses the level of human well-being within a country. HDI depends on three main factors: life expectancy, educational opportunity, and standard of living. We explore relationships between music consumption, human development, work and leisure in over 30 geographically and economically diverse countries. We examine whether variations in HDI, and its 3 component factors, reflect unique music consumption patterns around the world using our database from MixRadio. Our results suggest that education and income factors, as expressed in HDI, account for download variability across time and with respect to musical genre."
+	},
+	"rush": {
+		"mixradio" : true,
+		"description": "Over the past 40 years, Rush has become one of the most respected Canadian rock bands of all time and have developed a dedicated fan-base across the globe. We explored the downloading behaviours of world-wide Rush fans to unpack their overall musical interests. Our data revealed the following: that (1) Rush fans’ dominant genre is (unsurprisingly) rock, which includes a preference for artists such as Queen, The Rolling Stones, Pink Floyd, Deep Purple and Genesis; (2) Rush fans enjoy a range of complex Latin, jazz and classical music which includes artists such as Jesse Cooke (Latin), Miles Davis (jazz) and Wolfgang Amadeus Mozart (classical); (3) a majority of downloads in Rush fans’ collections stem from the 60s, 70s, and 80s giving them a sense of musical nostalgia; and (4) when compared to all other rock bands, Rush has the highest number of live downloads; fans appreciate the sound of their raw performance over (clinical) studio recordings."
+	},
+	"xhead": {
+		"mixradio" : true,
+		"description": "People exhibit diverse tastes for music where some prefer some genres over others. Using a large corpus of historical song downloads onto cell phones, we categorize users on a digital music streaming service as an “x-head”, where the “x” is replaced by an individual’s favourite, or majority downloaded, genre in their collection. Each coloured line represents a different x-head (Blues-head, Metal-head, etc…). The x-axis (“xweight”) is defined as the proportion of songs in a users collection that is their majority downloaded genre in .05 bins. For example, a Metal-head with 81% Metal in their collection would have an x-weight of 0.8. The y-axis represents the percent of X-heads in that category."
+	},
+	"bigwreck": {
+		"mixradio" : false,
+		"description": "" 
+	}
+}
